@@ -5,19 +5,19 @@ As a security professional at a large organization, part of my job is to investi
 My task is to examine the organization’s data in their employees and log_in_attempts tables. I’ll need to use SQL filters to retrieve records from different datasets and investigate the potential security issues.
 
 <h2>Retrieve after hours failed login attempts</h2>
-I recently discovered a potential security incident that occurred after business hours. To investigate this, I queried the <code>log_in_attempts</code> table to review after hours login activity. The following query identifies all failed login attempts that occurred after 18:00. The time of the login attempt is found in the <code>login_time column</code>. The success column contains a value of <code>0</code> when a login attempt failed; either a value of <code>0</code> or <code>FALSE</code> can be used in the query to identify failed login attempts.
+I recently discovered a potential security incident that occurred after business hours. To investigate this, I queried the <code>log_in_attempts</code> table to review after hours login activity. The following query identifies all failed login attempts that occurred after 18:00. The time of the login attempt is found in the <code>login_time</code> column. The success column contains a value of <code>0</code> when a login attempt failed; either a value of <code>0</code> or <code>FALSE</code> can be used in the query to identify failed login attempts.
 
 ![SQL01](https://github.com/user-attachments/assets/9094081d-8d9b-493d-a0d2-499d6ed9b351)
 
 The <code>SELECT * FROM log_in_attempts</code> part of the query returns all columns from the <code>log_in_attempts</code> table. The rest of the query, <code>WHERE login_time > '18:00' AND success = FALSE;</code> filters those records to only include ones where login times were after 6 pm and were failed attempts.
 
 <h2>Retrieve login attempts on specific dates</h2>
-A suspicious event occurred on 2022-05-09. To investigate this event, I reviewed all login attempts which occurred on this day and the day before: (the date of the login attempt is found in the <code>login_date column</code>)
+A suspicious event occurred on <code>2022-05-09</code>. To investigate this event, I reviewed all login attempts which occurred on this day and the day before: (the date of the login attempt is found in the <code>login_date</code> column)
 
 ![SQL02](https://github.com/user-attachments/assets/7a50418f-8d37-4350-b159-3a8c76473798)
 ![SQL03](https://github.com/user-attachments/assets/ef9b70ea-5dd4-47fb-9592-17228d94d6da)
 
-Here, the logial operator <code>OR</code> has been used to filter results. The two dates included have been separated with <code>OR</code> to get records of all login attempts that occured on 2022-05-09 or 2022-05-08.
+Here, the logial operator <code>OR</code> has been used to filter results. The two dates included have been separated with <code>OR</code> to get records of all login attempts that occured on <code>2022-05-09</code> or <code>2022-05-08</code>.
 
 <h2>Retrieve login attempts outside of Mexico</h2>
 There’s been suspicious activity with login attempts, but the team has determined that this activity didn't originate in Mexico. So I investigated login attempts that occurred outside of Mexico. I used filters in SQL to create a query that identifies all login attempts that occurred outside of Mexico:
@@ -58,4 +58,4 @@ My team needs to make one more update to employee machines. The employees who ar
 
 The <code>NOT</code> operator is used here to exclude all employees from the Information Technology department, and is placed after <code>WHERE</code>.
 <h2>Summary</h2>
-In this project, I ran SQL queries to retrieve information from a database. I also applied <code>AND</code>, <code>OR</code>, and <code>NOT</code> operators to filter SQL queries to investigate potential security issues and help the system secure.
+In this project, I ran SQL queries to retrieve information from a database. I also applied <code>AND</code>, <code>OR</code>, and <code>NOT</code> operators to filter SQL queries to investigate potential security issues and help keep the system secure.
