@@ -7,4 +7,4 @@ I am a security professional at a large organization. Part of my job is to inves
 
 My task is to examine the organization’s data in their employees and log_in_attempts tables. I’ll need to use SQL filters to retrieve records from different datasets and investigate the potential security issues.
 
-
+<h3><a href="https://github.com/TasneemSiddiqui/ApplyFiltersToSqlQueries/blob/main/SqlQueriesWalkthrough.md"><b>SQL queries walkthrough</b></a></h3>
