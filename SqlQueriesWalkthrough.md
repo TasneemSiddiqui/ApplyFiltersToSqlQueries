@@ -1,11 +1,11 @@
 <h1>Apply Filters to SQL Queries</h1>
 <h2>Project description</h2>
 As a security professional at a large organization, part of my job is to investigate security issues to help keep the system secure. I recently discovered some potential security issues that involve login attempts and employee machines.
-
+<br /><br />
 My task is to examine the organization’s data in their employees and log_in_attempts tables. I’ll need to use SQL filters to retrieve records from different datasets and investigate the potential security issues.
 
 <h2>Retrieve after hours failed login attempts</h2>
-I recently discovered a potential security incident that occurred after business hours. To investigate this, I queried the log_in_attempts table to review after hours login activity. The following query identifies all failed login attempts that occurred after 18:00: (the time of the login attempt is found in the login_time column. The success column contains a value of 0 when a login attempt failed; either a value of 0 or FALSE can be used in the query to identify failed login attempts.)
+I recently discovered a potential security incident that occurred after business hours. To investigate this, I queried the log_in_attempts table to review after hours login activity. The following query identifies all failed login attempts that occurred after 18:00. The time of the login attempt is found in the login_time column. The success column contains a value of 0 when a login attempt failed; either a value of 0 or FALSE can be used in the query to identify failed login attempts.
 
 ![SQL01](https://github.com/user-attachments/assets/9094081d-8d9b-493d-a0d2-499d6ed9b351)
 
